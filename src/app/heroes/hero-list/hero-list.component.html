@@ -1,3 +1,23 @@
-<p>
-  hero-list works!
-</p>
+<swkb-hero *ngFor="let hero of heroes$ | async; trackBy: trackByUrl"
+           [hero]="hero"></swkb-hero>
+
+<div class="loader__bg" *ngIf="isLoading$ | async">
+  <mat-spinner
+    class="loader"
+    color="accent"
+    mode="indeterminate"
+    [diameter]="40"
+    [value]="25"></mat-spinner>
+</div>
+
+<section class="full-width pager">
+  <button mat-raised-button
+          color="accent"
+          [class.invisible]="isFirst$ | async"
+          (click)="prev()">PREVIOUS</button>
+
+  <button mat-raised-button
+          color="accent"
+          [class.invisible]="isLast$ | async"
+          (click)="next()">NEXT</button>
+</section>

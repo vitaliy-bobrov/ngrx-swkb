@@ -1,0 +1,25 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+
+    &.blue {
+      color: #2196F3;
+    }
+
+    &.blue-gray {
+      color: #607D8B;
+    }
+
+    &.yellow {
+      color: #FFEB3B;
+    }
+
+    &.red {
+      color: #F44336;
+    }
+
+    &.brown {
+      color: #795548;
+    }
+  }
+}

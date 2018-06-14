@@ -1,27 +1,49 @@
-# SwkbT
+# Star Wars Knowledge Base
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-## Development server
+## Commands to generate parts
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Create new project:
+```bash
+  ng new swkb -p=swkb --style=scss
 
-## Code scaffolding
+  cd swkb
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Create basic structure:
+```bash
+  ng g module heroes
 
-## Build
+  ng g component heroes/hero-list
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  ng g component heroes/hero
 
-## Running unit tests
+  ng g interface heroes/models/Hero
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  ng g service heroes/swapi
 
-## Running end-to-end tests
+  ng add @angular/material
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+3. Add NgRx & Schematics
+```bash
+  yarn add @ngrx/{store,effects,entity,store-devtools}
 
-## Further help
+  yarn add -D @ngrx/schematics
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ng config cli.defaultCollection @ngrx/schematics
+
+  ng g store State --root --module=app.module.ts
+
+  ng g effect App --root --module=app.module.ts
+```
+
+  ### NgRx ng-add Future
+    - ng add @ngrx/store
+    - ng add @ngrx/effects
+    - ng add @ngrx/store-devtools
+
+```bash
+  ng g feature heroes/Heroes --reducers=../reducers/index.ts
+```
