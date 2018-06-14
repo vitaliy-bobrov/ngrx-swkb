@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+[Demo](https://vitaliy-bobrov.github.io/ngrx-swkb/)
+
 ## Commands to generate parts
 
 1. Create new project:
