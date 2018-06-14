@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:demo": "ng build --prod --base-href /ngrx-swkb/",
-    "deploy:demo": "gh-pages -d dist/ngx-popper"
+    "deploy:demo": "gh-pages -d dist/swkb"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +42,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "gh-pages": "^1.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",

@@ -37,13 +37,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   ng g store State --root --module=app.module.ts
 
   ng g effect App --root --module=app.module.ts
+
+  ng g feature heroes/Heroes --reducers=../reducers/index.ts
 ```
 
-  ### NgRx ng-add Future
+### NgRx ng-add Future
     - ng add @ngrx/store
     - ng add @ngrx/effects
     - ng add @ngrx/store-devtools
-
-```bash
-  ng g feature heroes/Heroes --reducers=../reducers/index.ts
-```
