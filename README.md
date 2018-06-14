@@ -58,7 +58,6 @@ yarn
 ```bash
 yarn build
 
-# or copy fetch-actions to node_modules
 npm link
 cd <app-folder>
 npm link fetch-actions
