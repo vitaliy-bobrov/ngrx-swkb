@@ -57,6 +57,12 @@ yarn
 ## Build / test schematic
 ```bash
 yarn build
-yarn link
+
+# or copy fetch-actions to node_modules
+npm link
+cd <app-folder>
+npm link fetch-actions
+
+
 ng g fetch-actions:fa heroes/Heroes
 ```
