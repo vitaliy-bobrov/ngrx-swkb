@@ -1,4 +1,4 @@
-# Star Wars Knowledge Base
+# NgRx Star Wars Knowledge Base
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
