@@ -45,3 +45,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     - ng add @ngrx/store
     - ng add @ngrx/effects
     - ng add @ngrx/store-devtools
+
+## Custom schematic
+```bash
+yarn add -g @angular-devkit/schematics-cli
+schematics schematic --name=fetch-actions
+cd fetch-actions
+yarn
+```
+
+## Build / test schematic
+```bash
+yarn build
+yarn link
+ng g fetch-actions:fa heroes/Heroes
+```
