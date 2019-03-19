@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect } from '@ngrx/effects';
+import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { getCurrentPage } from '../reducers/index';
 import { State } from './heroes.reducer';
@@ -18,8 +18,8 @@ import { map, switchMap, catchError, withLatestFrom } from 'rxjs/operators';
 export class HeroesEffects {
   @Effect()
   fetch$: Observable<HeroesActions> = this.actions$
-    .ofType(HeroesActionTypes.FetchHeroes)
     .pipe(
+      ofType(HeroesActionTypes.FetchHeroes),
       withLatestFrom(this.store),
       switchMap(([action, state]) =>
         this.service.getHeroes(getCurrentPage(state)).pipe(
@@ -31,8 +31,8 @@ export class HeroesEffects {
 
   @Effect()
   paginate$: Observable<HeroesActions> = this.actions$
-    .ofType(HeroesActionTypes.ChangePage)
     .pipe(
+      ofType(HeroesActionTypes.ChangePage),
       map(() => new FetchHeroes())
     );
 
