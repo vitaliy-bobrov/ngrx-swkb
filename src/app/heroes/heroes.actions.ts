@@ -2,14 +2,14 @@ import { Action } from '@ngrx/store';
 import { HeroesResponse } from './models/hero';
 import { HttpErrorResponse } from '@angular/common/http';
 
-export enum HeroesActionTypes {
+export const enum HeroesActionTypes {
   FetchHeroes = '[Heroes] Fetch Heroes',
   FetchHeroesSuccess = '[Heroes] Load Heroes Success',
   FetchHeroesError = '[Heroes] Load Heroes Error',
   ChangePage = '[Heroes] Change page'
 }
 
-export enum Pagination {
+export const enum Pagination {
   NEXT,
   PREV
 }
